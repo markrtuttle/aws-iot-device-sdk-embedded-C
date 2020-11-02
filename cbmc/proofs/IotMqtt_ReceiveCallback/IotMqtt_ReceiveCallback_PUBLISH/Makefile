@@ -39,3 +39,4 @@ ABSTRACTIONS += --remove-function-body destroy_subscription_list_element
 
 include ../Makefile
 include ../../Makefile.common
+PROOF_UID=IotMqtt_ReceiveCallback_PUBLISH

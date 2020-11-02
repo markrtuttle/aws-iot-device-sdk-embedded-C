@@ -93,4 +93,3 @@ UNWINDING += --unwindset '$(shell echo $(LOOP) | sed 's/ /,/g')'
 ################################################################
 
 sinclude ../Makefile.common
-PROOF_UID=IotMqtt_ReceiveCallback

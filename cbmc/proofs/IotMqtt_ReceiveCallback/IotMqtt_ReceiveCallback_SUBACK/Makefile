@@ -31,3 +31,4 @@ ABSTRACTIONS += --remove-function-body _topicMatch
 
 include ../Makefile
 include ../../Makefile.common
+PROOF_UID=IotMqtt_ReceiveCallback_SUBACK
