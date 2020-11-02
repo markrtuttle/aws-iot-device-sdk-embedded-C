@@ -295,6 +295,7 @@ def main():
         "width": int(math.log10(len(proof_dirs))) + 1
     }
 
+    run_cmd(["cmake", "-B", "build", "-S", "."], cwd="../..", check=True)
     configure_proof_dirs(proof_dirs, proof_root, counter, litani)
 
     print_counter(counter)
