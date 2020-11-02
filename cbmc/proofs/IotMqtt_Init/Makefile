@@ -10,3 +10,4 @@ OBJS += $(MQTT)/libraries/standard/mqtt/src/iot_mqtt_api.goto
 UNWINDING += --unwind 1
 
 include ../Makefile.common
+PROOF_UID=IotMqtt_Init

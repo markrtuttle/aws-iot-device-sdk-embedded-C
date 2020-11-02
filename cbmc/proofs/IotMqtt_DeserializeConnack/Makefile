@@ -8,3 +8,4 @@ OBJS = \
 	$(MQTT)/libraries/standard/mqtt/src/iot_mqtt_serialize.goto \
 
 include ../Makefile.common
+PROOF_UID=IotMqtt_DeserializeConnack
