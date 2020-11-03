@@ -178,7 +178,7 @@ def add_proof_jobs(proof_directory, proof_root, litani):
     proof_name = str(proof_directory.relative_to(proof_root))
 
     goto_binary = str(
-        (proof_directory / "gotos" / ("%s.goto" % harnesses[0][:-2])).resolve())
+        (proof_directory / ("%s.goto" % harnesses[0][:-len("_harness.c")])).resolve())
 
     # Build goto-binary
 
