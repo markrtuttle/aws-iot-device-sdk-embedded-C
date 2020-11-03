@@ -163,7 +163,10 @@ def get_litani_path(proof_root):
 def add_proof_jobs(proof_directory, proof_root, litani):
     proof_directory = pathlib.Path(proof_directory)
     harnesses = [
-        f for f in os.listdir(proof_directory) if f.endswith("_harness.c")]
+        f for
+        f in os.listdir(proof_directory) + os.listdir(proof_directory / "..")
+        if f.endswith("_harness.c")
+    ]
     if not len(harnesses) == 1:
         logging.error(
             "Found %d harnesses in directory '%s'", len(harnesses),
@@ -175,7 +178,7 @@ def add_proof_jobs(proof_directory, proof_root, litani):
     proof_name = str(proof_directory.relative_to(proof_root))
 
     goto_binary = str(
-        (proof_directory / ("%s.goto" % harnesses[0][:-2])).resolve())
+        (proof_directory / "gotos" / ("%s.goto" % harnesses[0][:-2])).resolve())
 
     # Build goto-binary
 
